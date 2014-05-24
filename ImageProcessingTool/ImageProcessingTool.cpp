@@ -137,6 +137,7 @@ void ImageProcessingTool::createStatusBar()
 //Slot functions
 void ImageProcessingTool::newFile(){
 	if(okToContinue()){
+		imageViewer->clearScene();
 		setCurrentFile("");
 	}
 }
@@ -249,9 +250,8 @@ void ImageProcessingTool::loadFile(const QString &fileName)
 	}
 
 	// Read file content into textEdit widget.
-	QTextStream in(&file);
 	QApplication::setOverrideCursor(Qt::WaitCursor);
-	//textEdit->setPlainText(in.readAll());
+	imageViewer->openImageFile(fileName);
 	QApplication::restoreOverrideCursor();
 
 	setCurrentFile(fileName);

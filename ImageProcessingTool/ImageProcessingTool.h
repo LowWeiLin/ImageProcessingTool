@@ -59,9 +59,6 @@ private:
     
     // Widgets and variables
 	ImageViewer* imageViewer;
-
-
-    //QPlainTextEdit *textEdit;
     QString currFile;
 	QString currDir;
 	QStringList recentFileList;
