@@ -1,6 +1,6 @@
 #include "ImageViewer.h"
 
-ImageViewer::ImageViewer(QWidget* parent) : QGraphicsView()
+ImageViewer::ImageViewer(QWidget* parent) : QGraphicsView(parent)
 {
 
 	//this->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);

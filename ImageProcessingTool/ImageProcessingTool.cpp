@@ -38,13 +38,23 @@ void ImageProcessingTool::closeEvent(QCloseEvent *event)
 
 void ImageProcessingTool::createWidgets()
 {
+	QSplitter* mainWidget = new QSplitter();
+	
 	imageViewer = new ImageViewer();
-	setCentralWidget(imageViewer);
+	imageViewer->openImageFile("test.jpg");
+	imageViewer->saveImage("test-out.jpg");
 
 	setWindowIcon(QIcon(":/images/ImageProcessingTool.png"));
 	setGeometry(0, 0, 550, 650);
 	setCurrentFile("");
 	setCurrentDir(".");
+
+	toolsPanel = new ToolsPanel();
+
+	mainWidget->addWidget(toolsPanel);
+	mainWidget->addWidget(imageViewer);
+
+	this->setCentralWidget(mainWidget);
 }
 
 void ImageProcessingTool::createActions()

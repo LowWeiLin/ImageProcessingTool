@@ -6,6 +6,7 @@
 #include <QAction>
 
 #include "ImageViewer.h"
+#include "ToolsPanel.h"
 
 class ImageProcessingTool : public QMainWindow
 {
@@ -59,6 +60,7 @@ private:
     
     // Widgets and variables
 	ImageViewer* imageViewer;
+	ToolsPanel* toolsPanel;
     QString currFile;
 	QString currDir;
 	QStringList recentFileList;
