@@ -19,7 +19,9 @@ void ToolsPanel::createWidgets(){
 
 
 	layout->addWidget(operationsSelector);
+	//layout->addWidget(operationsList);
 	layout->addStretch(1);
+	//layout->addWidget(histogramWidget);
 
 	this->setLayout(layout);
 }
