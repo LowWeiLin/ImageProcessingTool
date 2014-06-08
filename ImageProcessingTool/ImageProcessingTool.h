@@ -7,6 +7,8 @@
 
 #include "ImageViewer.h"
 #include "ToolsPanel.h"
+#include "Operation.h"
+#include "OperationGaussianBlur.h"
 
 class ImageProcessingTool : public QMainWindow
 {
